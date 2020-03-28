@@ -15,11 +15,15 @@
 
 (deftest get-mongo-port-test
   (testing "Should return mongodb port from test config"
-    (is (= (config/get-mongo-port) 27018))))
+    (is (= (config/get-mongo-port) 27017))))
 
 (deftest get-mongodb-db-test
   (testing "Should return mongodb db from test config"
     (is (= (config/get-mongo-db) "test"))))
+
+(deftest get-mongodb-articles-collection-test
+  (testing "Should return articles collection name from test config"
+    (is (= (config/get-mongo-articles-collection) "articles"))))
 
 (deftest get-mongodb-username-test
   (testing "Should return mongodb username from test config"

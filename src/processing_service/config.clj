@@ -25,6 +25,11 @@
   []
   (get-in env [:mongo :db]))
 
+(defn get-mongo-articles-collection
+  "Gets the name of the collection holding articles"
+  []
+  (get-in env [:mongo :article-collection]))
+
 (defn get-mongo-username
   "Gets the mongodb username (credentials) from config"
   []
@@ -49,4 +54,5 @@
   (start)
   (get-mongo-port)
   (get-mongo-password)
+  (get-mongo-articles-collection)
   (get-server-port))
