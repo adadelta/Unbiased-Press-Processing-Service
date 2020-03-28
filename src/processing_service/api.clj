@@ -14,9 +14,9 @@
   (some->> (slurp "project.clj") clojure.edn/read-string (drop 1) (take 2) (str/join " ")))
 
 (defn ping-services
-  "Pings all relevant services and returns a status map"
+  "Pings all relevant external services and returns a status map"
   []
-  (log/debug "Pinging all services")
+  (log/debug "Pinging all external services")
   {:aggregator "DOWN"
    :baas "DOWN"
    :ml-service "DOWN"
