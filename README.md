@@ -70,9 +70,13 @@ To run the server in development mode, run this command:
 
 ### Running the tests
 
-To run the tests, run this command:
+To run the unit tests, run this command:
 
     lein with-profile test-profile test
+
+To run the integration tests, add :integration keyword
+
+    lein with-profile test-profile test :integration
 
 ## License
 
