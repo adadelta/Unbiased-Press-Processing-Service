@@ -3,9 +3,9 @@
             [processing-service.config :refer :all :as config]
             [mount.core :refer :all]))
 
-;; We run a fixture (:once) starting the configuration state
+;; We run a fixture (:once) starting the configuration state only
 (defn start-states [f]
-  (mount.core/start)
+  (mount.core/start #'processing-service.config/env)
   (f))
 (clojure.test/use-fixtures :once start-states)
 
