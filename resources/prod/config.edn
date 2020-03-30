@@ -1,10 +1,10 @@
 {:secrets #include #join [#env HOME "/.secrets.edn"]
  :mongo {:port #or [#env UNBIASED_MONGO_PORT 27018]
          :host #or [#env UNBIASED_MONGO_HOST "localhost"]
-         :db #or [#env UNBIASED_MONGO_DB "test"]
+         :db #or [#env UNBIASED_MONGO_DB "unbiased"]
          :article-collection #or [#env UNBIASED_MONGO_ARTICLE_COLLECTION "articles"]
-         :credentials {:user #or [#env UNBIASED_MONGO_AUTH_USER "dev-admin"]
-                       :auth-db #or [#env UNBIASED_MONGO_AUTH_DB "dev"]
+         :credentials {:user #or [#env UNBIASED_MONGO_AUTH_USER "unbiased"]
+                       :auth-db #or [#env UNBIASED_MONGO_AUTH_DB "unbiased"]
                        :password ^:ref [:secrets :mongo-password-prod]}}
  :server {:port #or [#env SERVER_PORT 3000]}
  }
