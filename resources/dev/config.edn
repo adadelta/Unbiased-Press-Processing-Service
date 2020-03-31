@@ -1,8 +1,8 @@
 {:mongo {:port #or [#env DEV_UNBIASED_MONGO_PORT 27017]
          :host #or [#env DEV_UNBIASED_MONGO_HOST "localhost"]
          :db #or [#env DEV_UNBIASED_MONGO_DB "dev_unbiased"]
-         :article-collection #or [#env DEV_UNBIASED_MONGO_ARTICLE_COLLECTION "dev_articles"]
-         :credentials {:user #or [#env DEV_UNBIASED_MONGO_AUTH_USER "dev"]
+         :article-collection #or [#env DEV_UNBIASED_MONGO_ARTICLE_COLLECTION "articles"]
+         :credentials {:user #or [#env DEV_UNBIASED_MONGO_AUTH_USER "dev_user"]
                        :auth-db #or [#env DEV_UNBIASED_MONGO_AUTH_DB "dev_unbiased"]
                        :password #or [#env DEV_UNBIASED_MONGO_AUTH_PASSWORD "dev_password"]}}
  :server {:port #or [#env SERVER_PORT 3000]}}
