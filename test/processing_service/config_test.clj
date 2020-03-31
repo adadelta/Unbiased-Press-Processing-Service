@@ -19,7 +19,7 @@
 
 (deftest get-mongodb-db-test
   (testing "Should return mongodb db from test config"
-    (is (= (config/get-mongo-db) "test"))))
+    (is (= (config/get-mongo-db) "test_unbiased"))))
 
 (deftest get-mongodb-articles-collection-test
   (testing "Should return articles collection name from test config"
@@ -27,12 +27,12 @@
 
 (deftest get-mongodb-username-test
   (testing "Should return mongodb username from test config"
-    (is (= (config/get-mongo-username) "dev-admin"))))
+    (is (= (config/get-mongo-username) "test_user"))))
 
 (deftest get-mongodb-auth-db-test
   (testing "Should return mongodb auth-db from test config"
-    (is (= (config/get-mongo-auth-db) "dev"))))
+    (is (= (config/get-mongo-auth-db) "test_unbiased"))))
 
 (deftest get-mongodb-password-test
   (testing "Should return mongodb passowrd from test config"
-    (is (= (config/get-mongo-password) "S3cuRE!"))))
+    (is (= (config/get-mongo-password) "test_password"))))
