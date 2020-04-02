@@ -9,7 +9,7 @@
 (defn -main
   "Start service"
   [& _]
-  (log/info "Loading config")
+  (log/info "Starting states")
   (start)
   (log/info "Starting API service")
   (api/start (config/get-server-port)))
